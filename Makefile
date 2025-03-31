@@ -5,7 +5,7 @@ SRC = filename_check.c map_reader.c print_utils.c so_long.c \
 	print_utils2.c game_load.c
 	
 OBJ = $(SRC:.c=.o)
-CFLAGS = -g -Wextra -Werror -Wall -I /usr/include/minilibx-linux
+CFLAGS = -Wextra -Werror -Wall -I /usr/include/minilibx-linux
 CC = cc 
 
 all : $(NAME)
