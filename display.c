@@ -6,32 +6,11 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 15:54:21 by kemzouri          #+#    #+#             */
-/*   Updated: 2025/03/28 16:29:01 by kemzouri         ###   ########.fr       */
+/*   Updated: 2025/04/01 13:46:03 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-void	display_window(t_map *game)
-{
-	game->win_height = game->height * TILE_SIZE;
-	game->win_width = game->width * TILE_SIZE;
-	game->mlx = mlx_init();
-	if (!game->mlx)
-	{
-		ft_putstr_fd("Error\nFailed to initialize mlx.\n", 2);
-		ft_free(game);
-		exit(1);
-	}
-	game->mlx_window = mlx_new_window(game->mlx, game->win_width,
-			game->win_height, "so_long");
-	if (!game->mlx_window)
-	{
-		ft_putstr_fd("Error\nFailed to create window.\n", 2);
-		ft_free(game);
-		exit(1);
-	}
-}
 
 void	ft_free(t_map *game)
 {

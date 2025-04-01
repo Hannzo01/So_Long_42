@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 20:26:06 by kemzouri          #+#    #+#             */
-/*   Updated: 2025/03/29 01:44:14 by kemzouri         ###   ########.fr       */
+/*   Updated: 2025/04/01 13:46:52 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,4 @@ int	main(int argc, char *argv[])
 		return (free_2d_array(game->map), free(game), 1);
 	game_load(game);
 	ft_free(game);
-	return (0);
 }

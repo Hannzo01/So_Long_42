@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 15:57:46 by kemzouri          #+#    #+#             */
-/*   Updated: 2025/03/31 14:54:55 by kemzouri         ###   ########.fr       */
+/*   Updated: 2025/04/01 13:58:34 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ void	init_images(t_map *game)
 	if (game->p_image == NULL || game->d_image == NULL || game->f_image == NULL
 		|| game->c_image == NULL || game->w_image == NULL)
 	{
+		ft_putstr_fd("Error\nFailed to load images.\n", 2);
 		ft_free_images(game);
-		return ;
+		ft_free(game);
+		exit(1);
 	}
 }
 
